@@ -1,6 +1,6 @@
 import { currencyFormatter } from '../helpers/currency'
 
-const Product = ({ product }) => {
+const CartProduct = ({ product }) => {
   return (
     <>
       <div className='imagem-produto-wrapper'>
@@ -15,4 +15,4 @@ const Product = ({ product }) => {
   )
 }
 
-export default Product
+export default CartProduct

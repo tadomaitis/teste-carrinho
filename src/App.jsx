@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import Product from './components/Product'
+import CartProduct from './components/CartProduct'
 import './App.css'
 import { currencyFormatter } from './helpers/currency'
 
@@ -28,7 +28,7 @@ const App = () => {
           <ul className='lista-de-produtos'>
             {produtos.map(produto => (
               <li key={produto.uniqueId} className='item-carrinho'>
-                <Product product={produto} />
+                <CartProduct product={produto} />
               </li>
             ))}
           </ul>
