@@ -2,7 +2,7 @@ import CartProduct from '../CartProduct/CartProduct'
 import './Cart.css'
 import { currencyFormatter } from '../../helpers/currency'
 
-const Cart = ({ produtos, total }) => {
+const Cart = ({ carrinho, total }) => {
   return (
     <div className='carrinho'>
       <div className='titulo-carrinho'>
@@ -10,9 +10,9 @@ const Cart = ({ produtos, total }) => {
       </div>
       <div className='conteudo-carrinho'>
         <ul className='lista-de-produtos'>
-          {produtos.map(produto => (
-            <li key={produto.uniqueId} className='item-carrinho'>
-              <CartProduct product={produto} />
+          {carrinho.map(itemCarrinho => (
+            <li key={itemCarrinho.uniqueId} className='item-carrinho'>
+              <CartProduct product={itemCarrinho} />
             </li>
           ))}
         </ul>
