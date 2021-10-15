@@ -33,14 +33,7 @@ const App = () => {
 
   return (
     <div className='App'>
-      <ul className="carrinhos">
-        <li className="seleciona-carrinho">
-          <button onClick={handleClick}>Carrinho 1</button>
-        </li>
-        <li className="seleciona-carrinho">
-          <button onClick={handleClick}>Carrinho 2</button>
-        </li>
-      </ul>
+      <button className="alterna-carrinho" onClick={handleClick}>Alternar Carrinho</button>
       {carrinho1Selecionado ? (
         <Cart
           carrinho={carrinho1}
