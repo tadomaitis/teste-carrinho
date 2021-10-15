@@ -47,10 +47,15 @@
   font-size: 1.5rem;
 }
 
+.frete-gratis {
+  width: 90%;
+  margin: auto;
+}
+
 .frete-gratis p {
   color: #217a02;
   background-color: #c7ffa6;
-  width: fit-content;
+  width: 90%;
   margin: -1em auto 1em;
   padding: 8px 20px;
   border-radius: 50px;
@@ -71,4 +76,10 @@
   color: #ffffff;
   background-color: #3b74f2;
   cursor: pointer;
+}
+
+@media screen and (min-width: 550px) {
+  .frete-gratis {
+    width: 80%;
+  }
 }
