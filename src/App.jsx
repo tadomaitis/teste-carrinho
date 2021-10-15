@@ -1,43 +1,53 @@
-import { useState } from 'react'
-import logo from './logo.svg'
+import { useState, useEffect } from 'react'
+import Product from './components/Product'
 import './App.css'
+import { currencyFormatter } from './helpers/currency'
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [produtos, setProdutos] = useState([])
+  const [total, setTotal] = useState([])
+
+  const api_url = 'https://tadomaitis.github.io/data/acima-10-reais.json'
+
+  useEffect(() => {
+    fetch(api_url)
+      .then(response => response.json())
+      .then(data => {
+        setProdutos(data.items)
+        setTotal(data.value)
+      })
+  }, [])
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+    <div className='App'>
+      <div className='carrinho'>
+        <div className='titulo-carrinho'>
+          <h1>Meu carrinho</h1>
+        </div>
+        <div className='conteudo-carrinho'>
+          <ul className='lista-de-produtos'>
+            {produtos.map(produto => (
+              <li key={produto.uniqueId} className='item-carrinho'>
+                <Product product={produto} />
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="total-carrinho-container">
+          <div className='total-carrinho'>
+            <p>Total</p>
+            <p>{currencyFormatter.format(total/100)}</p>
+          </div>
+          {total > 1000 && (
+            <div className="frete-gratis">
+              <p>Parabéns, sua compra tem frete grátis !</p>
+            </div>
+          )}
+        </div>
+        <div className='finalizar-compra'>
+          <button className='btn-finalizar-compra'>Finalizar compra</button>
+        </div>
+      </div>
     </div>
   )
 }
