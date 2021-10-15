@@ -1,0 +1,74 @@
+.carrinho {
+  background-color: #ffffff;
+  width: 60%;
+  max-width: 575px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 20px #aaaaaa;
+}
+
+.titulo-carrinho {
+  border-bottom: 2px solid #dddddd;
+}
+
+.titulo-carrinho h1 {
+  font-size: 1.7rem;
+}
+
+.lista-de-produtos {
+  width: 90%;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+}
+
+.item-carrinho {
+  max-width: 100%;
+  display: flex;
+  margin-top: 1.75em;
+}
+
+.total-carrinho-container {
+  margin-top: 1.5em;
+  border-top: 2px solid #dddddd;
+  border-bottom: 2px solid #dddddd;
+}
+
+.total-carrinho {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1em 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-carrinho p {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.frete-gratis p {
+  color: #217a02;
+  background-color: #c7ffa6;
+  width: fit-content;
+  margin: -1em auto 1em;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.btn-finalizar-compra {
+  width: 90%;
+  max-width: 500px;
+  margin: 1.5em auto;
+  padding: 1em 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.35rem;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  background-color: #3b74f2;
+  cursor: pointer;
+}

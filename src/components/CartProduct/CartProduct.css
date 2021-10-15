@@ -1,0 +1,36 @@
+.imagem-produto-wrapper {
+  min-width: 125px;
+  height: 125px;
+  border: 1px solid #cccccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagem-produto {
+  width: 95%;
+  height: 100%;
+}
+
+.dados-produto {
+  width: 90%;
+  padding: 0.5em 1.5em;
+  text-align: left;
+}
+
+.nome-produto {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0.5em 0;
+}
+
+.preço-listado {
+  font-size: 0.8rem;
+  margin: 0 0 0.5em 0;
+}
+
+.preço-cobrado {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}

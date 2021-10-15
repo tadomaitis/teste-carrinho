@@ -1,4 +1,5 @@
-import { currencyFormatter } from '../helpers/currency'
+import './CartProduct.css'
+import { currencyFormatter } from '../../helpers/currency'
 
 const CartProduct = ({ product }) => {
   return (
